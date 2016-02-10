@@ -7,7 +7,7 @@ $( document ).ready(function() {
     //Hide the card <div> on page load
     $('#card').hide();
 
-    //ON INPUT MOUST CLICK 'Go'
+    //ON INPUT MOUSE CLICK 'Go'
     //Run game loop
     $('#submit').click(function(){
 
