@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Music Flash Cards</title>
+
+    <link rel="stylesheet" type="text/css" href="vendor/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="pure-g">
+            <div class="pure-u">
+                <h1 class="title">Sheet Music Sight Reading Flash Cards</h1>
+            </div>
+        </div>
+
+        <form class="options pure-form">
+            <div class="pure-u pure-u-4-24">
+                <label for="total-cards"></label>
+                <select id="total-cards" class="pure-u-23-24">
+                    <option disabled selected>Total</option>
+                    <option value="5">5</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="1000">1000</option>
+                </select>
+            </div>
+
+            <div class="pure-u pure-u-1-8">
+                <label for="clef"></label>
+                <select id="clef" class="pure-u-23-24">
+                    <option disabled selected>Clef</option>
+                    <option value="0">Bass</option>
+                    <option value="1">Treble</option>
+                </select>
+            </div>
+
+            <div class="pure-u pure-u-4-24">
+                <label for="speed"></label>
+                <select id="speed" class="pure-u-23-24">
+                    <option disabled selected>Speed</option>
+                    <option value="10000">Slow</option>
+                    <option value="4000">Medium</option>
+                    <option value="2000">Fast</option>
+                    <option value="900">Fastest</option>
+                </select>
+            </div>
+
+            <!-- I'll leave card size out for now. Maybe I'll add it later.-->
+            <!--<div class="pure-u pure-u-4-24">-->
+                <!--<label for="card-size"></label>-->
+                <!--<select id="card-size" class="pure-u-23-24">-->
+                    <!--<option disabled selected>Size</option>-->
+                    <!--<option value="0">Small</option>-->
+                    <!--<option value="1">Medium</option>-->
+                    <!--<option value="2">Large</option>-->
+                <!--</select>-->
+            <!--</div>-->
+
+            <div class="pure-u pure-u-1-5">
+                <label for="names"></label>
+                <select id="names" class="pure-u-23-24">
+                    <option disabled selected>Show Names?</option>
+                    <option value="0">Names</option>
+                    <option value="1">No Names</option>
+                </select>
+            </div>
+
+            <div id="submit" class="pure-button pure-button-primary">Go</div>
+        </form>
+
+
+        <div class="pure-u">
+            <div id="card">
+                <h2 id="clef-title"></h2>
+                <div>
+                    <span class="cardimage"></span>
+                    <div class="cardname"></div>
+                    <span class="counter"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+</html>
+
+<script type="text/javascript" src="vendor/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="index.js"></script>

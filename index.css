@@ -1,0 +1,58 @@
+body{
+    text-align: center;
+    background: #00ff99;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+h1{
+    color: #396;
+    font-weight: 100;
+    font-size: 40px;
+    margin: 10px 0 20px;
+}
+
+h2{
+    color: #396;
+    font-weight: 100;
+    font-size: 25px;
+    margin: 40px 0 20px;
+}
+
+.main{
+    display: inline-block;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#card{
+    color: #fff;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#card > div{
+    padding: 10px;
+
+    border-radius: 3px;
+    background: #00BF96;
+    display: inline-block;
+}
+
+#card div > span{
+    padding: 15px;
+
+    border-radius: 3px;
+    background: #00816A;
+    display: inline-block;
+}
+
+.cardname{
+    padding: 5px 0 5px 0;
+    font-size: 24px;
+}
+
+.options{
+
+}
