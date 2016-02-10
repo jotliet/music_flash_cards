@@ -84,8 +84,8 @@ $( document ).ready(function() {
         $('.options').hide();
 
         //if 'bass clef' is selected, total cards is 36 (0 - 35)
-        //if 'treble clef' is selected, total cards is UNKNOWN, 50 is placeholder
-        var max_range = $('#clef').val() == 0 ? 35 : 50;
+        //if 'treble clef' is selected, total cards is 36 also (I'll keep this logic in here in-case I want to add other clefs or decks later)
+        var max_range = $('#clef').val() == 0 ? 35 : 35;
         var cards = $('#clef').val() == 0 ? cards_bass : cards_treble;
         var clef_title = $('#clef').val() == 0 ? 'Bass Clef' : 'Treble Clef';
         var total_cards = $('#total-cards').val();
@@ -178,7 +178,77 @@ var cards_bass = [
 ];
 
 var cards_treble = [
-    {"src":"#",
-    "name":"none"
-    }
+    {"src":"cards/treble/A4.PNG",
+    "name":"A"},
+    {"src":"cards/treble/A5.PNG",
+    "name":"A"},
+    {"src":"cards/treble/Ab4.PNG",
+    "name":"A Flat"},
+    {"src":"cards/treble/Ab5.PNG",
+    "name":"A Flat"},
+    {"src":"cards/treble/As4.PNG",
+    "name":"A Sharp"},
+    {"src":"cards/treble/As5.PNG",
+    "name":"A Sharp"},
+    {"src":"cards/treble/B4.PNG",
+    "name":"B"},
+    {"src":"cards/treble/B5.PNG",
+    "name":"B"},
+    {"src":"cards/treble/Bb4.PNG",
+    "name":"B Flat"},
+    {"src":"cards/treble/Bb5.PNG",
+    "name":"Flat"},
+    {"src":"cards/treble/C4.PNG",
+    "name":"C"},
+    {"src":"cards/treble/C5.PNG",
+    "name":"C"},
+    {"src":"cards/treble/C6.PNG",
+    "name":"C"},
+    {"src":"cards/treble/Cs4.PNG",
+    "name":"C Sharp"},
+    {"src":"cards/treble/Cs5.PNG",
+    "name":"C Sharp"},
+    {"src":"cards/treble/Cs6.PNG",
+    "name":"C Sharp"},
+    {"src":"cards/treble/D4.PNG",
+    "name":"D"},
+    {"src":"cards/treble/D5.PNG",
+    "name":"D"},
+    {"src":"cards/treble/Db4.PNG",
+    "name":"D Flat"},
+    {"src":"cards/treble/Db5.PNG",
+    "name":"D Flat"},
+    {"src":"cards/treble/Ds4.PNG",
+    "name":"D Sharp"},
+    {"src":"cards/treble/Ds5.PNG",
+    "name":"D Sharp"},
+    {"src":"cards/treble/E4.PNG",
+    "name":"E"},
+    {"src":"cards/treble/E5.PNG",
+    "name":"E"},
+    {"src":"cards/treble/Eb4.PNG",
+    "name":"E Flat"},
+    {"src":"cards/treble/Eb5.PNG",
+    "name":"E Flat"},
+    {"src":"cards/treble/F4.PNG",
+    "name":"F"},
+    {"src":"cards/treble/F5.PNG",
+    "name":"F "},
+    {"src":"cards/treble/Fs4.PNG",
+    "name":"F Sharp"},
+    {"src":"cards/treble/Fs5.PNG",
+    "name":"F Sharp"},
+    {"src":"cards/treble/G4.PNG",
+    "name":"G"},
+    {"src":"cards/treble/G5.PNG",
+    "name":"G"},
+    {"src":"cards/treble/Gb4.PNG",
+    "name":"G Flat"},
+    {"src":"cards/treble/Gb5.PNG",
+    "name":"G Flat"},
+    {"src":"cards/treble/Gs4.PNG",
+    "name":"G Sharp"},
+    {"src":"cards/treble/Gs5.PNG",
+    "name":"G Sharp"}
 ];
+
