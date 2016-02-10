@@ -24,4 +24,4 @@ There are a few user-generated options:
 ### Future 
 Eventually I'll give the user an option to change the card size. Sheet music is printed in different fonts, shapes and sizes... so I've found it best for the brain if you train with variable sizes.
 
-Also, I'd like to eventually eliminate the .PNG images and use vector images, but that would take more than the 3 hours of my life I've allotted to this application.
+Also, I'd like to eliminate the .PNG images and use vector images, but that would require more than the 3 hours of life I've allotted to this application.
