@@ -17,7 +17,7 @@ Lilypond uses a proprietary markdown language for rendering plain-text to .PDF i
 
 **Treble Clef Chord**
 
-```json
+```
 \relative c'{
    \clef treble
    <c e g>1
@@ -26,10 +26,25 @@ Lilypond uses a proprietary markdown language for rendering plain-text to .PDF i
 
 **Bass Clef Chord**
 
-```json
+```
 \relative c'{
   \clef bass
    e,1 e1 e'1
+}
+```
+
+**Both Staves**
+
+```
+\relative c'{
+	\new StaffGroup <<
+  		\new Staff {
+    			a' b c  \bar "||"
+      	}
+  		\new Staff {
+    			\clef bass c,, d e
+  	}
+	>>
 }
 ```
 

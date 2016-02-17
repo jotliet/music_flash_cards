@@ -30,3 +30,6 @@ Eventually I'll give the user an option to change the card size. Sheet music is 
   * Replaced original bass/treble .PNG images with vector images
   * Minor changes to index.js to support new features
   * Added ./lilypond folder with README.md
+*  02.17.2016
+  * Added image to title page
+  

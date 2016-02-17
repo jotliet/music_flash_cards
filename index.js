@@ -10,8 +10,12 @@
 
 $( document ).ready(function() {
 
-    //Hide the card <div> on page load
-    $('#card').hide();
+    //ON PAGE LOAD
+    //hide the title and counter
+    $('.counter').hide();
+
+    //Display the main page image
+    $(".cardimage").append('<img src="main.png"height="350" width="600">');
 
     //ON INPUT MOUSE CLICK 'Go'
     //Run game loop
@@ -29,8 +33,8 @@ $( document ).ready(function() {
         //initialize the cards
         function initializeCards(total_cards, speed, show_cards, clef_title) {
 
-            //show the card <div>
-            $('#card').show();
+            //reveal the title and counter
+            $('.counter').show();
 
             //declare our element variables
             var card = document.getElementById('card');
@@ -72,8 +76,13 @@ $( document ).ready(function() {
                     //show the options again
                     $('.options').show();
 
-                    //hide the cards again
-                    $('#card').hide();
+                    //hide the title and counter
+                    $('.counter').hide();
+
+                    $('#clef-title').empty();
+
+                    //Display the main page image
+                    $(".cardimage").empty().append('<img src="main.png"height="350" width="600">');
                 }
 
                 //subtract from the counter; repeat.
