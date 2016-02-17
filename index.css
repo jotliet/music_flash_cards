@@ -19,6 +19,15 @@ h2{
     margin: 40px 0 20px;
 }
 
+a {
+    position: absolute;
+    left: 5px;
+    float: left;
+    padding: 5px 0 0 5px;
+    font-size: 10px;
+    text-decoration: none;
+}
+
 .main{
     display: inline-block;
     font-family: sans-serif;
