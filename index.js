@@ -79,7 +79,7 @@ $( document ).ready(function() {
                     //hide the title and counter
                     $('.counter').hide();
 
-                    $('#clef-title').empty();
+                    $('#clef-title, .cardname').empty();
 
                     //Display the main page image
                     $(".cardimage").empty().append('<img src="main.png"height="350" width="600">');
