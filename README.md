@@ -24,4 +24,11 @@ There are a few user-generated options:
 ### Future 
 Eventually I'll give the user an option to change the card size. Sheet music is printed in different fonts, shapes and sizes... so I've found it best for the brain if you train with variable sizes.
 
-Also, I'd like to eliminate the .PNG images and use vector images, but that would require more than the 3 hours of life I've allotted to this application.
+### Changes
+*	02.15.2016
+  *	 Introduced vector images for optimized rendering
+  *	 Added major, minor and major/minor chords
+*  02.16.2016
+  * Replaced original bass/treble .PNG images with vector images
+  * Minor changes to index.js to support new features
+  * Added ./lilypond folder with README.md
