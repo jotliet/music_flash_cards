@@ -3,15 +3,13 @@
 ![Note Icon](favicon.ico)
 
 ##Overview 
-This is a simple musical notation flash card application. The logic is written in Javascript, but it can be transponsed into any language because the concepts are rudimentary.  
+This is a simple musical notation flash card application. 
 
 I wrote this out of a desire to improve my reflexive sight-reading speed behind the piano. 
 
-The application displays a random card. 
+The application displays one random card before pausing and continuing to the next random card. The number of cards-per-deck is dependent on the input of the user. The user also controls the speed at which the cards are dealt. 
 
-The goal was for the user to have their hands on the piano while the application runs, therefor the process is automated. 
-
-There are a few user-generated options:
+Here are the user-generated options:
 
 * **Total** - This is the number of cards per session. 
 
