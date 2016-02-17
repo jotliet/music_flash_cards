@@ -2,6 +2,12 @@
  * Created by alexander on 2/6/16.
  */
 
+/**
+ * Note: See .lilypond/README.md for information on creating new cards.
+ *
+ *
+ */
+
 $( document ).ready(function() {
 
     //Hide the card <div> on page load
@@ -49,7 +55,8 @@ $( document ).ready(function() {
                 //My original idea was to make the cards small/medium/large since the goal is mastering sight reading, and sheet music always
                 //comes in various typographical sizes. So it's best to train your brain to recognize the notes no matter what size. But I'm
                 //not feeling much like implementing that right now.
-                cardimage.innerHTML = '<img src="'+cards[random_number].src+'" height="400" width="300">';
+                cardimage.innerHTML = '<img src="'+cards[random_number].src+'" height="350" width="600">';
+
 
                 //If the user wants the card names displayed
                 if(show_cards) {
@@ -83,11 +90,34 @@ $( document ).ready(function() {
         //hide the options menu while the cards are running
         $('.options').hide();
 
-        //if 'bass clef' is selected, total cards is 36 (0 - 35)
-        //if 'treble clef' is selected, total cards is 36 also (I'll keep this logic in here in-case I want to add other clefs or decks later)
-        var max_range = $('#clef').val() == 0 ? 35 : 35;
-        var cards = $('#clef').val() == 0 ? cards_bass : cards_treble;
-        var clef_title = $('#clef').val() == 0 ? 'Bass Clef' : 'Treble Clef';
+        //Number of cards.
+        //Example: 44 cards, set the number to 43 (since we start at 0).
+        if ($('#clef').val() == 0) {
+            var max_range = 35;
+            var cards = cards_bass;
+            var clef_title = 'Bass Clef';
+
+        } else if ($('#clef').val() == 1) {
+            var max_range = 43;
+            var cards = cards_treble;
+            var clef_title = 'Treble Clef';
+
+        } else if ($('#clef').val() == 2) {
+            var max_range = 6;
+            var cards = cards_chords_major;
+            var clef_title = 'Major Chords';
+
+        } else if ($('#clef').val() == 3) {
+            var max_range = 6;
+            var cards = cards_chords_minor;
+            var clef_title = 'Minor Chords';
+
+        } else if ($('#clef').val() == 4) {
+            var max_range = 13;
+            var cards = cards_chords_minor.concat(cards_chords_major);
+            var clef_title = 'Major and Minor Chords';
+        }
+
         var total_cards = $('#total-cards').val();
         var speed = $('#speed').val();
         var show_cards = $('#names').val() == 0;
@@ -103,101 +133,111 @@ $( document ).ready(function() {
 //Helper array to store the card objects.
 //Right now a card consists only of a name and the path to an image.
 var cards_bass = [
-    {"src":"cards/bass/As2.PNG",
+    {"src":"cards/bass/As2.png",
     "name":"A Sharp"},
-    {"src":"cards/bass/As3.PNG",
+    {"src":"cards/bass/As3.png",
     "name":"A Sharp"},
-    {"src":"cards/bass/A2.PNG",
+    {"src":"cards/bass/A2.png",
     "name":"A"},
-    {"src":"cards/bass/A3.PNG",
+    {"src":"cards/bass/A3.png",
     "name":"A"},
-    {"src":"cards/bass/Ab2.PNG",
+    {"src":"cards/bass/Ab2.png",
     "name":"A Flat"},
-    {"src":"cards/bass/Ab3.PNG",
+    {"src":"cards/bass/Ab3.png",
     "name":"A Flat"},
-    {"src":"cards/bass/B2.PNG",
+    {"src":"cards/bass/B2.png",
     "name":"B"},
-    {"src":"cards/bass/B3.PNG",
+    {"src":"cards/bass/B3.png",
     "name":"B"},
-    {"src":"cards/bass/Bb2.PNG",
+    {"src":"cards/bass/Bb2.png",
     "name":"B Flat"},
-    {"src":"cards/bass/Bb3.PNG",
+    {"src":"cards/bass/Bb3.png",
     "name":"B Flat"},
-    {"src":"cards/bass/Cs2.PNG",
+    {"src":"cards/bass/Cs2.png",
     "name":"C Sharp"},
-    {"src":"cards/bass/Cs3.PNG",
+    {"src":"cards/bass/Cs3.png",
     "name":"C Sharp"},
-    {"src":"cards/bass/Cs4.PNG",
+    {"src":"cards/bass/Cs4.png",
     "name":"C Sharp"},
-    {"src":"cards/bass/C2.PNG",
+    {"src":"cards/bass/C2.png",
     "name":"C"},
-    {"src":"cards/bass/C3.PNG",
+    {"src":"cards/bass/C3.png",
     "name":"C"},
-    {"src":"cards/bass/C4.PNG",
+    {"src":"cards/bass/C4.png",
     "name":"C"},
-    {"src":"cards/bass/Ds2.PNG",
+    {"src":"cards/bass/Ds2.png",
     "name":"D Sharp"},
-    {"src":"cards/bass/Ds3.PNG",
+    {"src":"cards/bass/Ds3.png",
     "name":"D Sharp"},
-    {"src":"cards/bass/D2.PNG",
+    {"src":"cards/bass/D2.png",
     "name":"D"},
-    {"src":"cards/bass/D3.PNG",
+    {"src":"cards/bass/D3.png",
     "name":"D"},
-    {"src":"cards/bass/Db2.PNG",
+    {"src":"cards/bass/Db2.png",
     "name":"D Flat"},
-    {"src":"cards/bass/Db3.PNG",
+    {"src":"cards/bass/Db3.png",
     "name":"D Flat"},
-    {"src":"cards/bass/E2.PNG",
+    {"src":"cards/bass/E2.png",
     "name":"E"},
-    {"src":"cards/bass/E3.PNG",
+    {"src":"cards/bass/E3.png",
     "name":"E"},
-    {"src":"cards/bass/Eb2.PNG",
+    {"src":"cards/bass/Eb2.png",
     "name":"E Flat"},
-    {"src":"cards/bass/Eb3.PNG",
+    {"src":"cards/bass/Eb3.png",
     "name":"E Flat"},
-    {"src":"cards/bass/Fs2.PNG",
+    {"src":"cards/bass/Fs2.png",
     "name":"F Sharp"},
-    {"src":"cards/bass/Fs3.PNG",
+    {"src":"cards/bass/Fs3.png",
     "name":"F Sharp"},
-    {"src":"cards/bass/F2.PNG",
+    {"src":"cards/bass/F2.png",
     "name":"F"},
-    {"src":"cards/bass/F3.PNG",
+    {"src":"cards/bass/F3.png",
     "name":"F"},
-    {"src":"cards/bass/Gs2.PNG",
+    {"src":"cards/bass/Gs2.png",
     "name":"G Sharp"},
-    {"src":"cards/bass/Gs3.PNG",
+    {"src":"cards/bass/Gs3.png",
     "name":"G Sharp"},
-    {"src":"cards/bass/G2.PNG",
+    {"src":"cards/bass/G2.png",
     "name":"G"},
-    {"src":"cards/bass/G3.PNG",
+    {"src":"cards/bass/G3.png",
     "name":"G"},
-    {"src":"cards/bass/Gb2.PNG",
+    {"src":"cards/bass/Gb2.png",
     "name":"G Flat"},
-    {"src":"cards/bass/Gb3.PNG",
+    {"src":"cards/bass/Gb3.png",
     "name":"G Flat"}
 ];
 
 var cards_treble = [
+    {"src":"cards/treble/A3.PNG",
+    "name":"A"},
     {"src":"cards/treble/A4.PNG",
     "name":"A"},
     {"src":"cards/treble/A5.PNG",
     "name":"A"},
+    {"src":"cards/treble/Ab3.PNG",
+    "name":"A Flat"},
     {"src":"cards/treble/Ab4.PNG",
     "name":"A Flat"},
     {"src":"cards/treble/Ab5.PNG",
     "name":"A Flat"},
+    {"src":"cards/treble/As3.PNG",
+    "name":"A Sharp"},
     {"src":"cards/treble/As4.PNG",
     "name":"A Sharp"},
     {"src":"cards/treble/As5.PNG",
     "name":"A Sharp"},
+    {"src":"cards/treble/B3.PNG",
+    "name":"B"},
     {"src":"cards/treble/B4.PNG",
     "name":"B"},
     {"src":"cards/treble/B5.PNG",
     "name":"B"},
+    {"src":"cards/treble/Bb3.PNG",
+    "name":"B Flat"},
     {"src":"cards/treble/Bb4.PNG",
     "name":"B Flat"},
     {"src":"cards/treble/Bb5.PNG",
-    "name":"Flat"},
+    "name":"B Flat"},
     {"src":"cards/treble/C4.PNG",
     "name":"C"},
     {"src":"cards/treble/C5.PNG",
@@ -238,17 +278,56 @@ var cards_treble = [
     "name":"F Sharp"},
     {"src":"cards/treble/Fs5.PNG",
     "name":"F Sharp"},
+    {"src":"cards/treble/G3.PNG",
+    "name":"G"},
     {"src":"cards/treble/G4.PNG",
     "name":"G"},
     {"src":"cards/treble/G5.PNG",
     "name":"G"},
+    {"src":"cards/treble/Gb3.PNG",
+    "name":"G Flat"},
     {"src":"cards/treble/Gb4.PNG",
     "name":"G Flat"},
     {"src":"cards/treble/Gb5.PNG",
     "name":"G Flat"},
+    {"src":"cards/treble/Gs3.PNG",
+    "name":"G Sharp"},
     {"src":"cards/treble/Gs4.PNG",
     "name":"G Sharp"},
     {"src":"cards/treble/Gs5.PNG",
     "name":"G Sharp"}
 ];
 
+var cards_chords_major = [
+    {"src":"cards/chords/major/Amaj.png",
+    "name":"A Major"},
+    {"src":"cards/chords/major/Bmaj.png",
+    "name":"B Major"},
+    {"src":"cards/chords/major/Cmaj.png",
+    "name":"C Major"},
+    {"src":"cards/chords/major/Dmaj.png",
+    "name":"D Major"},
+    {"src":"cards/chords/major/Emaj.png",
+    "name":"E Major"},
+    {"src":"cards/chords/major/Fmaj.png",
+    "name":"F Major"},
+    {"src":"cards/chords/major/Gmaj.png",
+    "name":"G Major"}
+];
+
+var cards_chords_minor = [
+    {"src":"cards/chords/minor/Amin.png",
+    "name":"A Minor"},
+    {"src":"cards/chords/minor/Bmin.png",
+    "name":"B Minor"},
+    {"src":"cards/chords/minor/Cmin.png",
+    "name":"C Minor"},
+    {"src":"cards/chords/minor/Dmin.png",
+    "name":"D Minor"},
+    {"src":"cards/chords/minor/Emin.png",
+    "name":"E Minor"},
+    {"src":"cards/chords/minor/Fmin.png",
+    "name":"F Minor"},
+    {"src":"cards/chords/minor/Gmin.png",
+    "name":"G Minor"}
+];

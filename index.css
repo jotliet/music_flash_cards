@@ -32,6 +32,8 @@ h2{
     font-size: 30px;
 }
 
+
+
 #card > div{
     padding: 10px;
 
@@ -44,13 +46,18 @@ h2{
     padding: 15px;
 
     border-radius: 3px;
-    background: #00816A;
+    background: #FFFFFF;
     display: inline-block;
 }
 
 .cardname{
     padding: 5px 0 5px 0;
     font-size: 24px;
+}
+
+.counter {
+    color: #000000;
+    background-color: #00816A;
 }
 
 .options{
